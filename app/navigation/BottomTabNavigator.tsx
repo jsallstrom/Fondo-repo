@@ -10,6 +10,7 @@ import * as React from "react";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
+import HomeScreen from "../screens/HomeScreen";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
@@ -31,6 +32,7 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
           ),
+          headerShown: false,
         }}
       />
       <BottomTab.Screen
@@ -63,9 +65,9 @@ function TabOneNavigator() {
   return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: "Tab One Title" }}
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerShown: false }}
       />
     </TabOneStack.Navigator>
   );
