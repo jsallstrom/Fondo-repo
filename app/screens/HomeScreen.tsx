@@ -6,6 +6,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.screenContainer}>
       <Text style={{ color: "white" }}>HomeScreen</Text>
+      <MealSelectionView></MealSelectionView>
     </SafeAreaView>
   );
 };
