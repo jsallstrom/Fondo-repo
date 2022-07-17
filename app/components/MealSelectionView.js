@@ -1,5 +1,4 @@
 import {
-  ActivityIndicator,
   Button,
   FlatList,
   Image,
@@ -11,6 +10,11 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import LoadingComponent from "./LoadingComponent";
+import { API } from "../constants/API";
+import ErrorMessage from "./ErrorMessage";
+
+import Layout from "../constants/Layout";
 
 const MealSelectionView = () => {
   const navigation = useNavigation();
@@ -32,9 +36,7 @@ const MealSelectionView = () => {
   const fetchData = async (limit, offset) => {
     try {
       setIsLoading(true);
-      const resp = await fetch(
-        `https://playground.devskills.co/api/rest/meal-roulette-app/meals/limit/${limit}/offset/${offset}`
-      );
+      const resp = await fetch(API + `limit/${limit}/offset/${offset}`);
       const data = await resp.json();
       setData(data.meal_roulette_app_meals_aggregate.nodes);
     } catch (error) {
@@ -51,9 +53,14 @@ const MealSelectionView = () => {
     return (
       <Pressable
         key={index}
-        style={styles.mealItemContainer}
-        // TODO: make height more dynamic
-        onPress={() => navigation.navigate("MealDetailsScreen", { id: id })}
+        style={
+          Layout.isSmallDevice
+            ? styles.mealItemContainerSmallScreen
+            : styles.mealItemContainer
+        }
+        onPress={() =>
+          navigation.navigate("MealDetailsScreen", { id: id, title: title })
+        }
       >
         <Image style={styles.mealItemImage} source={{ uri: picture }}></Image>
         <Text style={styles.mealItemText}>{title}</Text>
@@ -61,42 +68,59 @@ const MealSelectionView = () => {
     );
   };
 
-  if (isLoading) return <ActivityIndicator size={"large"}></ActivityIndicator>;
-  if (error) return <Text style={styles.errorText}>{error}</Text>;
+  if (error) return <ErrorMessage message={error}></ErrorMessage>;
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList
-        data={data}
-        numColumns={2}
-        renderItem={({ item }, index) => {
-          return renderItem(item, index);
-        }}
-      ></FlatList>
-      <Button
+      {isLoading ? (
+        <LoadingComponent />
+      ) : (
+        <>
+          <FlatList
+            data={data}
+            numColumns={Layout.isSmallDevice ? 1 : 2}
+            renderItem={({ item }, index) => {
+              return renderItem(item, index);
+            }}
+          ></FlatList>
+        </>
+      )}
+
+      <Pressable
         title="Refresh"
         onPress={() => {
           const newOffset = currentOffset + currentLimit;
           fetchData(currentLimit, newOffset);
           setoffset(newOffset);
         }}
-      ></Button>
+      >
+        <View style={styles.refreshButton}>
+          <Text style={{ textAlign: "center" }}>Refresh</Text>
+        </View>
+      </Pressable>
     </SafeAreaView>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
 
-  errorText: { color: "red" },
-
   mealItemContainer: {
     padding: 10,
     width: "50%",
-    height: 150,
+    height: Layout.window.height / 4,
     marginBottom: 100,
   },
+
+  mealItemContainerSmallScreen: {
+    padding: 10,
+    width: "100%",
+    height: Layout.window.height / 3,
+    marginBottom: 50,
+  },
+
   mealItemImage: {
     width: "100%",
     height: "100%",
@@ -106,6 +130,15 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     marginTop: 30,
+  },
+
+  refreshButton: {
+    borderRadius: 100,
+    width: Layout.window.height / 9,
+    height: Layout.window.height / 9,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignSelf: "center",
   },
 });
 
