@@ -2,6 +2,13 @@
 
 Your task is to build a meal roulette app that integrates with the Meal Roulette API and presents the retrieved data. Please agree with your hiring team regarding the tech stack choice.
 
+
+
+https://user-images.githubusercontent.com/40351836/179606154-cc0a1294-2663-4de4-9c58-e20d786cc9a0.MP4
+
+
+
+
 The app should have a meal selection view and a meal details view.
 
 Tapping on the refresh button should present a selection of the next 4 meals.
@@ -12,9 +19,18 @@ There should also be a way to navigate back to the list view from the details vi
 
 When finished developing make sure to add a screen recording + executable (`.apk` or `.app` depending on the platform choice) to the repo. 
 
+
+
+
+
+
 ## Mockup
 
 ![meal-roulette](https://user-images.githubusercontent.com/1162212/114553140-9fb4fa80-9c65-11eb-91ae-ce30dc3522b7.png)
+
+
+
+
 
 ## API
 Make sure to check with your hiring team whether you need to integrate with the GraphQL API or the REST API.
