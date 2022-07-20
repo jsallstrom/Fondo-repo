@@ -10,10 +10,9 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import LoadingComponent from "./LoadingComponent";
 import { API } from "../constants/API";
 import ErrorMessage from "./ErrorMessage";
-
+import LoadingComponent from "./LoadingComponent";
 import Layout from "../constants/Layout";
 
 const MealSelectionView = () => {

@@ -1,12 +1,12 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import MealSelectionView from "../components/MealSelectionView";
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.screenContainer}>
+    <View style={styles.screenContainer}>
       <MealSelectionView></MealSelectionView>
-    </SafeAreaView>
+    </View>
   );
 };
 

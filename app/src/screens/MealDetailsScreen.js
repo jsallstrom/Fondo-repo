@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import ErrorMessage from "../components/ErrorMessage";
 import LoadingComponent from "../components/LoadingComponent";
 import { API } from "../constants/API";
+import Layout from "../constants/Layout";
 
 const MealDetailsScreen = ({ navigation, route }) => {
   const { id, title } = route.params;
@@ -62,8 +63,6 @@ const MealDetailsScreen = ({ navigation, route }) => {
 };
 
 export default MealDetailsScreen;
-
-import Layout from "../constants/Layout";
 
 const styles = StyleSheet.create({
   scrollViewContainer: {
