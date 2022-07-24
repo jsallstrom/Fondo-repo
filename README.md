@@ -4,7 +4,7 @@ Your task is to build a meal roulette app that integrates with the Meal Roulette
 
 
 
-https://user-images.githubusercontent.com/40351836/179606154-cc0a1294-2663-4de4-9c58-e20d786cc9a0.MP4
+
 
 
 
