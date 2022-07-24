@@ -2,40 +2,27 @@
 
 Your task is to build a meal roulette app that integrates with the Meal Roulette API and presents the retrieved data. Please agree with your hiring team regarding the tech stack choice.
 
-
-
-https://user-images.githubusercontent.com/40351836/179606154-cc0a1294-2663-4de4-9c58-e20d786cc9a0.MP4
-
-
-
+https://user-images.githubusercontent.com/40351836/180661083-e504c04f-1b01-4f13-aabd-09989e7ea557.mp4
 
 The app should have a meal selection view and a meal details view.
 
 Tapping on the refresh button should present a selection of the next 4 meals.
 
-Tapping on a meal on the list should open the details view for that meal. 
+Tapping on a meal on the list should open the details view for that meal.
 
 There should also be a way to navigate back to the list view from the details view.
 
-When finished developing make sure to add a screen recording + executable (`.apk` or `.app` depending on the platform choice) to the repo. 
-
-
-
-
-
+When finished developing make sure to add a screen recording + executable (`.apk` or `.app` depending on the platform choice) to the repo.
 
 ## Mockup
 
 ![meal-roulette](https://user-images.githubusercontent.com/1162212/114553140-9fb4fa80-9c65-11eb-91ae-ce30dc3522b7.png)
 
-
-
-
-
 ## API
+
 Make sure to check with your hiring team whether you need to integrate with the GraphQL API or the REST API.
 
-### REST 
+### REST
 
 <details>
  	<summary>Click to expand the request examples.</summary>
@@ -59,7 +46,7 @@ https://playground.devskills.co/api/rest/meal-roulette-app/meals/4
  <details>
  	<summary>Click to expand the request examples.</summary>
 
- 	Endpoint: https://playground.devskills.co/v1/graphql
+Endpoint: https://playground.devskills.co/v1/graphql
 
 #### Get all meals
 

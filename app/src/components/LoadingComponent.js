@@ -1,17 +1,11 @@
-import {
-  ActivityIndicator,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 const LoadingComponent = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <ActivityIndicator size={"large"}></ActivityIndicator>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <ActivityIndicator size={"large"} testID="loader"></ActivityIndicator>
+    </View>
   );
 };
 

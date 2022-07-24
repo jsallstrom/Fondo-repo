@@ -2,10 +2,10 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import MealSelectionView from "../components/MealSelectionView";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.screenContainer}>
-      <MealSelectionView></MealSelectionView>
+      <MealSelectionView navigation={navigation}></MealSelectionView>
     </View>
   );
 };

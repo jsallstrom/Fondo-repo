@@ -1,0 +1,637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pressing the refresh button, refreshes the page 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "id": 6,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/One-pan%20spaghetti.webp?alt=media&token=8a36711c-e986-4742-a485-08ea71447109",
+          "title": "One-pan spaghetti with nduja, fennel & olives",
+        },
+        Object {
+          "id": 7,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20pancakes.webp?alt=media&token=3b8df6fd-63e5-4661-805c-4868179487b4",
+          "title": "Easy pancakes",
+        },
+        Object {
+          "id": 8,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/%20Easy%20chicken%20fajitas.webp?alt=media&token=4bc04b16-5c96-42f0-aa6d-4f52f1d11a91",
+          "title": "Easy chicken fajitas",
+        },
+        Object {
+          "id": 9,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20carrot%20cake.webp?alt=media&token=d55b4b7d-0639-4b89-b4ea-b4e96dbf4f96",
+          "title": "Easy carrot cake",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    testID="food-flatlist"
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/One-pan%20spaghetti.webp?alt=media&token=8a36711c-e986-4742-a485-08ea71447109",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              One-pan spaghetti with nduja, fennel & olives
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20pancakes.webp?alt=media&token=3b8df6fd-63e5-4661-805c-4868179487b4",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Easy pancakes
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/%20Easy%20chicken%20fajitas.webp?alt=media&token=4bc04b16-5c96-42f0-aa6d-4f52f1d11a91",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Easy chicken fajitas
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20carrot%20cake.webp?alt=media&token=d55b4b7d-0639-4b89-b4ea-b4e96dbf4f96",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Easy carrot cake
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#2196F3",
+        "borderRadius": 100,
+        "elevation": 5,
+        "height": 148.22222222222223,
+        "justifyContent": "center",
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.25,
+        "shadowRadius": 4,
+        "width": 148.22222222222223,
+      }
+    }
+    title="Refresh"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "textAlign": "center",
+        }
+      }
+    >
+      Refresh
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`render component and expect to match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Chorizo%20%26%20mozzarella%20gnocchi%20bake.webp?alt=media&token=d8511cac-4029-4c44-a5bc-35b8b0664cfe",
+          "title": "Chorizo & mozzarella gnocchi bake",
+        },
+        Object {
+          "id": 2,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20butter%20chicken.webp?alt=media&token=baaf3b5b-0528-4bcf-b5c0-d429c95313ed",
+          "title": "Easy butter chicken",
+        },
+        Object {
+          "id": 4,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20classic%20lasagne.webp?alt=media&token=c13ea24f-cff5-44c3-90a9-f5f3e0b47e90",
+          "title": "Easy classic lasagne",
+        },
+        Object {
+          "id": 5,
+          "picture": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Thai%20fried%20prawn%20%26%20pineapple%20rice.webp?alt=media&token=268c55fc-e977-496c-be36-b99d9e6eba04",
+          "title": "Thai fried prawn & pineapple rice",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    testID="food-flatlist"
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Chorizo%20%26%20mozzarella%20gnocchi%20bake.webp?alt=media&token=d8511cac-4029-4c44-a5bc-35b8b0664cfe",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Chorizo & mozzarella gnocchi bake
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20butter%20chicken.webp?alt=media&token=baaf3b5b-0528-4bcf-b5c0-d429c95313ed",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Easy butter chicken
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Easy%20classic%20lasagne.webp?alt=media&token=c13ea24f-cff5-44c3-90a9-f5f3e0b47e90",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Easy classic lasagne
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 333.5,
+                "marginBottom": 100,
+                "padding": 10,
+                "width": "50%",
+              }
+            }
+            testID="food-item"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://firebasestorage.googleapis.com/v0/b/devskills-prod.appspot.com/o/Thai%20fried%20prawn%20%26%20pineapple%20rice.webp?alt=media&token=268c55fc-e977-496c-be36-b99d9e6eba04",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 20,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "marginTop": 30,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Thai fried prawn & pineapple rice
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#2196F3",
+        "borderRadius": 100,
+        "elevation": 5,
+        "height": 148.22222222222223,
+        "justifyContent": "center",
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.25,
+        "shadowRadius": 4,
+        "width": 148.22222222222223,
+      }
+    }
+    title="Refresh"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "textAlign": "center",
+        }
+      }
+    >
+      Refresh
+    </Text>
+  </View>
+</View>
+`;

@@ -3,21 +3,20 @@ import {
   FlatList,
   Image,
   Pressable,
-  SafeAreaView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import LoadingComponent from "./LoadingComponent";
 import { API } from "../constants/API";
 import ErrorMessage from "./ErrorMessage";
-import LoadingComponent from "./LoadingComponent";
+
 import Layout from "../constants/Layout";
+import RefreshButton from "./RefreshButton";
+import FoodItem from "./FoodItem";
 
-const MealSelectionView = () => {
-  const navigation = useNavigation();
-
+const MealSelectionView = ({ navigation }) => {
   const [error, seterror] = useState(null);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -36,108 +35,66 @@ const MealSelectionView = () => {
     try {
       setIsLoading(true);
       const resp = await fetch(API + `limit/${limit}/offset/${offset}`);
+
       const data = await resp.json();
+
+      if (data.meal_roulette_app_meals_aggregate.nodes.length === 0) {
+        throw new Error("Nothing was returned from API!");
+      }
       setData(data.meal_roulette_app_meals_aggregate.nodes);
+      seterror(null);
     } catch (error) {
-      seterror(error);
+      seterror(error.message);
     } finally {
       setIsLoading(false);
     }
   };
 
   const renderItem = ({ id, title, picture }, index) => {
-    // will use id to navigate to MealDetailsScreen for specific Meal
-    console.log({ title });
-
     return (
-      <Pressable
+      <FoodItem
         key={index}
-        style={
-          Layout.isSmallDevice
-            ? styles.mealItemContainerSmallScreen
-            : styles.mealItemContainer
-        }
+        title={title}
+        picture={picture}
         onPress={() =>
           navigation.navigate("MealDetailsScreen", { id: id, title: title })
         }
-      >
-        <Image style={styles.mealItemImage} source={{ uri: picture }}></Image>
-        <Text style={styles.mealItemText}>{title}</Text>
-      </Pressable>
+        isSmallDevice={Layout.isSmallDevice}
+      ></FoodItem>
     );
   };
 
-  if (error) return <ErrorMessage message={error}></ErrorMessage>;
-
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
+      {error && <ErrorMessage message={error}></ErrorMessage>}
       {isLoading ? (
         <LoadingComponent />
       ) : (
-        <>
-          <FlatList
-            data={data}
-            numColumns={Layout.isSmallDevice ? 1 : 2}
-            renderItem={({ item }, index) => {
-              return renderItem(item, index);
-            }}
-          ></FlatList>
-        </>
+        <FlatList
+          data={data}
+          numColumns={Layout.isSmallDevice ? 1 : 2}
+          renderItem={({ item }, index) => {
+            return renderItem(item, index);
+          }}
+          testID={"food-flatlist"}
+        ></FlatList>
       )}
 
-      <Pressable
-        title="Refresh"
+      <RefreshButton
         onPress={() => {
           const newOffset = currentOffset + currentLimit;
           fetchData(currentLimit, newOffset);
           setoffset(newOffset);
         }}
-      >
-        <View style={styles.refreshButton}>
-          <Text style={{ textAlign: "center" }}>Refresh</Text>
-        </View>
-      </Pressable>
-    </SafeAreaView>
+        title={"Refresh"}
+      ></RefreshButton>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-
-  mealItemContainer: {
-    padding: 10,
-    width: "50%",
-    height: Layout.window.height / 4,
-    marginBottom: 100,
-  },
-
-  mealItemContainerSmallScreen: {
-    padding: 10,
-    width: "100%",
-    height: Layout.window.height / 3,
-    marginBottom: 50,
-  },
-
-  mealItemImage: {
-    width: "100%",
-    height: "100%",
-    borderRadius: 20,
-  },
-  mealItemText: {
-    color: "white",
-    textAlign: "center",
-    marginTop: 30,
-  },
-
-  refreshButton: {
-    borderRadius: 100,
-    width: Layout.window.height / 9,
-    height: Layout.window.height / 9,
-    backgroundColor: "white",
-    justifyContent: "center",
-    alignSelf: "center",
   },
 });
 
